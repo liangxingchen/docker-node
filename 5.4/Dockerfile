@@ -3,7 +3,8 @@ FROM maichong/debian:jessie
 MAINTAINER LiangXingchen <liang@maichong.it>
 
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update
+    && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		curl \
 		wget \
@@ -11,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		make \
 		g++ \
 		gcc \
+	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
 
