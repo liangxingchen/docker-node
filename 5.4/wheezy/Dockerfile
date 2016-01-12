@@ -3,7 +3,7 @@ FROM maichong/debian:wheezy
 MAINTAINER LiangXingchen <liang@maichong.it>
 
 
-RUN apt-get update
+RUN apt-get update \
     && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		curl \
