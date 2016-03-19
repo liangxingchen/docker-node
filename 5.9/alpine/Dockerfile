@@ -3,11 +3,11 @@ FROM alpine:3.3
 MAINTAINER LiangXingchen <liang@maichong.it>
 
 ENV NPM_CONFIG_LOGLEVEL=info \
-NPM_CONFIG_DISTURL=http://npm.taobao.org/mirrors/node \
-NPM_CONFIG_REGISTRY=https://registry.npm.taobao.org \
+  NPM_CONFIG_DISTURL=http://npm.taobao.org/mirrors/node \
+  NPM_CONFIG_REGISTRY=https://registry.npm.taobao.org \
   NPM_CONFIG_PROGRESS=false \
-NODE_VERSION=5.9.0 \
-NPM_VERSION=3
+  NPM_CONFIG_COLOR=false \
+  NODE_VERSION=5.9.0
 
 RUN apk add --update curl make gcc g++ binutils-gold python linux-headers paxctl libgcc libstdc++ \
   && curl -sSL $NPM_CONFIG_DISTURL/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.gz | tar -xz \

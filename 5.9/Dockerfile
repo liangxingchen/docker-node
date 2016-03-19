@@ -6,6 +6,7 @@ ENV NPM_CONFIG_LOGLEVEL=info \
   NPM_CONFIG_DISTURL=http://npm.taobao.org/mirrors/node \
   NPM_CONFIG_REGISTRY=https://registry.npm.taobao.org \
   NPM_CONFIG_PROGRESS=false \
+  NPM_CONFIG_COLOR=false \
   NODE_VERSION=5.9.0
 
 RUN apt-get update \
