@@ -10,7 +10,7 @@ ENV NPM_CONFIG_LOGLEVEL=info \
   NODE_VERSION=5.9.1
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+    && apt-get install -y \
         ca-certificates \
         curl \
         g++ \
