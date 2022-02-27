@@ -9,7 +9,7 @@ ENV NPM_CONFIG_REGISTRY=https://registry.npm.taobao.org/
 COPY sources.list /etc/apt/sources.list
 
 RUN apt-get update \
-&& apt-get install -y --no-install-recommends chromium ca-certificates bzip2 libfontconfig locales ttf-wqy-microhei xfonts-wqy \
+&& apt-get install -y --no-install-recommends chromium ca-certificates bzip2 dnsutils curl iputils-ping telnet libfontconfig locales ttf-wqy-microhei xfonts-wqy \
 && rm -rf /var/lib/apt/lists/* \
 && sed -ie 's/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g' /etc/locale.gen \
 && locale-gen \
