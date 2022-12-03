@@ -1,4 +1,4 @@
-FROM node:18.12.0-bullseye-slim
+FROM node:18.12.1-bullseye-slim
 
 ENV TZ=Asia/Shanghai LANG=zh_CN.UTF-8 NPM_CONFIG_REGISTRY=https://registry.npmmirror.com/
 
