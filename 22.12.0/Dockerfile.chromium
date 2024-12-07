@@ -1,0 +1,7 @@
+FROM registry.cn-hangzhou.aliyuncs.com/miaomo/node:22.12.0
+
+RUN apt-get update \
+&& apt-get install -y --no-install-recommends chromium=130.0.6723.91-1~deb12u1 chromium-common=130.0.6723.91-1~deb12u1 libfontconfig ttf-wqy-microhei xfonts-wqy \
+&& rm -rf /var/lib/apt/lists/* \
+&& fc-cache -vf \
+&& fc-list
