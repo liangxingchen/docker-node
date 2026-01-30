@@ -1,0 +1,7 @@
+FROM registry.cn-hangzhou.aliyuncs.com/miaomo/node:24.13.0
+
+RUN apt-get update \
+&& apt-get install -y --no-install-recommends chromium chromium-common libfontconfig ttf-wqy-microhei xfonts-wqy \
+&& rm -rf /var/lib/apt/lists/* \
+&& fc-cache -vf \
+&& fc-list
